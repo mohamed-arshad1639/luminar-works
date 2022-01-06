@@ -1,0 +1,16 @@
+.row{
+    width: 50%;
+    height: 500px;
+    background-color: gold;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+
+}
+.col{
+    width: 100px;
+    height: 300px;
+    background-color: green;
+    border: gray 2px solid;
+}

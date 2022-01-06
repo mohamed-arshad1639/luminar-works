@@ -1,0 +1,20 @@
+.parent
+{
+    width: 500px;
+    height: 200px;
+    background-color: burlywood;
+    border: crimson solid 2px;
+    position: absolute;
+    
+}
+.child{
+    width: 100px;
+    height: 100px;
+    left:133px ;
+    background-color: darkgreen;
+    position: absolute;
+    top: 154px;
+    
+body{
+    background-color:ghostwhite
+}

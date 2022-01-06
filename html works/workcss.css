@@ -1,0 +1,45 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@300&display=swap');
+.head1{
+    color: brown;
+}
+p{
+    color:black;
+}
+header{
+    background-color: cornsilk;
+    padding-bottom: 3%;
+}
+main{
+    color: crimson;
+padding-bottom: 5%;
+}
+footer{
+    background-color:dimgray;
+    padding-bottom: 5%;
+}
+.head4{
+    color: darkslateblue;
+    padding-top: 2%;
+}
+.head2{
+    color:cadetblue
+}.head3{
+    color: chocolate;
+}
+.head4{
+    color: crimson;
+}
+
+p{
+    font-family: 'Zen Kaku Gothic Antique'}
+.b1{
+    color: ghostwhite;
+    background-color: goldenrod;
+    height: 300px;
+    width: 300px;
+    border: indianred solid 10px;
+}
+#b2{
+    color:lightcoral;
+}

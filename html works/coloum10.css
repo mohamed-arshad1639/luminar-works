@@ -1,0 +1,39 @@
+.row{
+    border: chartreuse solid 2px;
+    height: 500px;
+    border: 500px;
+    background-color: #d1ab10;
+    position: relative;
+}
+.col{
+     height: 200px;
+     width: 100px;
+     border: brown solid 2px;
+
+
+}
+.col-1{
+   
+    position: absolute;
+    background-color: blueviolet;
+}
+.col-2{
+    position: absolute;
+    background-color: blueviolet;
+    left: 110px;
+}
+.col-3{
+    position: absolute;
+    background-color: blueviolet;
+    left: 220px;
+}
+.col-4{
+    position: absolute;
+    background-color: blueviolet;
+    left: 330px;
+}
+body{
+    background-image: url(./images/alchemist.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}

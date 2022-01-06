@@ -1,0 +1,29 @@
+.child{
+    height: 599px;
+    width: 261px;
+    background-color:bisque;
+    border: solid hsla(340, 85%, 45%, 0.863) 3px;
+    margin-left: 15px;
+    padding: 20px;
+    
+   
+}
+.parent{
+    height: 600px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+
+}
+h3{
+    text-align: center;
+}
+h4{
+    text-align: center;
+}
+h1{
+    text-align: center;
+}
+img{
+   margin-left: 25px;
+}

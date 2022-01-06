@@ -1,0 +1,9 @@
+.box{
+    height: 300px;
+    width: 100px;
+    background-color: gold;
+    position: sticky;
+    position: fixed;
+    /* left: 100px; */
+    top: 100px;
+}
