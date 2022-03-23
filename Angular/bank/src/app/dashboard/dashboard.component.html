@@ -1,0 +1,142 @@
+<div class=" gradient-custom">
+
+   
+    <div class=" container py-5 h-75">
+        <div class="row mt-5">
+            <h1  class="text-white p-2  col-5 ">Hi,{{user}}</h1>
+            <h4  class="text-white p-2  col-5 ">LogInTime:{{ltime|date:'short'}}</h4>
+            <a class="text-white p-2 text col-5" routerLink="/transaction">Transaction History</a>
+            <button type="button" class=" col-2 "(click)="logout()">LogOut</button>
+            <button tyoe="button" (click)="deleteAcc()"> delete my account</button>
+            <app-delete (onCancel)="cancelFromParent()" [item]="acno"></app-delete>
+           
+        </div>
+    
+        <div class="row d-flex justify-content-center align-items-center h-100">
+
+
+
+            <div  [ngClass]="acno? 'c1':'' "  class="col-12 col-md-8 col-lg-6 col-xl-5">
+
+                <div class="card bg-dark text-white" style="border-radius: 1rem;">
+                    <div class="card-body p-5 text-center">
+
+
+                        <div class="mb-md-5 mt-md-4 pb-5">
+                            <form [formGroup]="depositForm" (ngSubmit)="deposit()">
+
+
+
+                                <h2 appHighlight class="fw-bold mb-4 text-uppercase">deposit</h2>
+
+
+
+
+
+                                <div class="form-outline form-white mb-4">
+                                    <input type="text" formControlName="acno" id="acno" name="acno"
+                                        class="form-control form-control-lg" />
+                                    <div *ngIf="(this.depositForm.get('acno')?.touched||this.depositForm.get('acno')?.dirty)&&this.depositForm.get('acno')?.errors"
+                                        style="color: red;">Make sure that AccountNumber is Numerals</div>
+
+                                    <label class="form-label mt-1 text-uppercase" for="acno">AccountNumber</label>
+                                </div>
+
+                                <div class="form-outline form-white mb-4">
+                                    <input type="password" formControlName="password" id="password" name="password"
+                                        class="form-control form-control-lg" />
+                                    <div *ngIf="(this.depositForm.get('password')?.touched||this.depositForm.get('password')?.dirty)&&this.depositForm.get('password')?.errors"
+                                        style="color: red;">No special Charectors Allowed</div>
+
+                                    <label class="form-label mt-2 text-uppercase" for="password">Password</label>
+                                </div>
+
+                                <div class="form-outline form-white mb-4">
+                                    <input type="text" formControlName="amount" id="amount" name="amount"
+                                        class="form-control form-control-lg" />
+                                    <div *ngIf="(this.depositForm.get('amount')?.touched||this.depositForm.get('amount')?.dirty)&&this.depositForm.get('amount')?.errors"
+                                        style="color: red;">No special Charectors Allowed</div>
+
+                                    <label class="form-label mt-1 text-uppercase" for="amount">amount</label>
+                                </div>
+
+
+
+                                <button class="btn btn-outline-light btn-lg px-5 text-uppercase"
+                                    type="submit">deposit</button>
+
+                            </form>
+
+
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div [ngClass]="acno? 'c1':'' "  class="col-12 col-md-8 col-lg-6 col-xl-5">
+                <div class="card bg-dark text-white" style="border-radius: 1rem;">
+                    <div class="card-body p-5 text-center">
+
+                        <div class="mb-md-5 mt-md-4 pb-5">
+                            <form [formGroup]="withdrawlForm" (ngSubmit)="withdrawl()">
+
+
+
+                                <h2 appHighlight class="fw-bold mb-4 text-uppercase">withdrawl</h2>
+
+
+
+
+
+                                <div class="form-outline form-white mb-4">
+                                    <input type="text" formControlName="acno1" id="acno1" name="acno1"
+                                        class="form-control form-control-lg" />
+                                    <div *ngIf="(this.withdrawlForm.get('acno1')?.touched||this.withdrawlForm.get('acno1')?.dirty)&&this.withdrawlForm.get('acno1')?.errors"
+                                        style="color: red;">Make sure that AccountNumber is Numerals</div>
+
+                                    <label class="form-label mt-1 text-uppercase" for="acno1">AccountNumber</label>
+                                </div>
+
+                                <div class="form-outline form-white mb-4">
+                                    <input type="password" formControlName="pswd1" id="pswd1" name="pswd1"
+                                        class="form-control form-control-lg" />
+                                    <div *ngIf="(this.withdrawlForm.get('pswd1')?.touched||this.withdrawlForm.get('pswd1')?.dirty)&&this.withdrawlForm.get('pswd1')?.errors"
+                                        style="color: red;">No special Charectors Allowed</div>
+
+                                    <label class="form-label mt-2 text-uppercase" for="pswd1">password</label>
+                                </div>
+
+                                <div class="form-outline form-white mb-4">
+                                    <input type="text" formControlName="amount1" id="amount1" name="amount1"
+                                        class="form-control form-control-lg" />
+                                    <div *ngIf="(this.withdrawlForm.get('amount1')?.touched||this.withdrawlForm.get('amount1')?.dirty)&&this.withdrawlForm.get('amount1')?.errors"
+                                        style="color: red;">No special Charectors Allowed</div>
+
+                                    <label class="form-label mt-1 text-uppercase" for="amount">Amount</label>
+                                </div>
+
+
+
+                                <button class="btn btn-outline-light btn-lg px-5 text-uppercase"
+                                    type="submit">withdrawl</button>
+
+                            </form>
+
+
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+      
+    </div>
+</div>

@@ -1,0 +1,70 @@
+<div class=" gradient-custom">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                <div class="card bg-dark text-white" style="border-radius: 1rem;">
+                    <div class="card-body p-5 text-center">
+
+                        <form [formGroup]="registerform">
+
+                            <div class="mb-md-5 mt-md-4 pb-5">
+
+
+
+                                <!-- STRING INTERPOLATION -->
+
+                                <h2 class="fw-bold mb-4 text-uppercase">Sign Up</h2>
+
+
+                                <div class="form-outline form-white mb-4">
+                                    <input type="text" formControlName="name" id="username"
+                                        class="form-control form-control-lg" name="uname" />
+                                       <div  *ngIf="(this.registerform.get('name')?.touched||this.registerform.get('name')?.dirty)&&this.registerform.get('name')?.errors" style="color: red;">User Name Must be Alphabet </div>
+                                    <label class="form-label mt-1" for="username">EnterYourUserName</label>
+                                   
+                                </div>
+                               
+
+
+                                <div class="form-outline form-white mb-4">
+                                    <input type="text" formControlName="accno" id="accountnumberSignup"
+                                        class="form-control form-control-lg" name="acno" />
+                                        <div  *ngIf="(this.registerform.get('accno')?.touched||this.registerform.get('accno')?.dirty)&&this.registerform.get('accno')?.errors" style="color: red;">Make sure that AccountNumber is Numerals</div>
+                                    <label class="form-label mt-1" for="accountnumberSignup" >AccountNumber</label>
+                                </div>
+
+                                <div class="form-outline form-white mb-4">
+                                    <input type="password" formControlName="pswd" id="typePasswordX"
+                                        class="form-control form-control-lg" name="pswd"/>
+                                        <div  *ngIf="(this.registerform.get('pswd')?.touched||this.registerform.get('pswd')?.dirty)&&this.registerform.get('pswd')?.errors" style="color: red;">No special Charectors Allowed</div>
+
+                                    <label class="form-label mt-2" for="typePasswordX">Password</label>
+                                </div>
+
+
+
+                                <button class="btn btn-outline-light btn-lg px-5" type="submit"
+                                    (click)="register()">Register</button>
+
+                                <div class="d-flex justify-content-center text-center mt-4 pt-1">
+                                    <a href="#!" class="text-white"><i class="fab fa-facebook-f fa-lg"></i></a>
+                                    <a href="#!" class="text-white"><i class="fab fa-twitter fa-lg mx-4 px-2"></i></a>
+                                    <a href="#!" class="text-white"><i class="fab fa-google fa-lg"></i></a>
+                                </div>
+
+                            </div>
+
+                            <div>
+                                <p class="mb-0">Already have an account? <a routerLink=''
+                                        class="text-white-50 fw-bold">logIn</a></p>
+                            </div>
+
+                        </form>
+
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

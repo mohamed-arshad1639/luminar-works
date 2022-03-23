@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4"></div>
+            <div class="col-4">
+
+                <input class="form-group" type="text" id="b_name" placeholder="enter book name">
+                <button class="btn btn-success" onclick="fetchBook()">find</button>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8">
+                <table class="table">
+                    <tr>
+                        <th>id</th>
+                        <th>book-name</th>
+                        <th>auther</th>
+                        <th>price</th>
+                        <th>rating</th>
+                    </tr>
+                    <tbody id="result">
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-2"></div>
+        </div>
+
+
+    </div>
+
+</body>
+<script>
+    const books = [
+        { id: 100, book_name: "richdaad", auther: "robert kiyosaki", price: "150", rating: 8 / 10 },
+        { id: 100, book_name: "alchemist", auther: "robert kiyosaki", price: "150", rating: 8 / 10 },
+        { id: 100, book_name: "you can win", auther: "robert kiyosaki", price: "150", rating: 8 / 10 },
+        { id: 100, book_name: "who will cry when you die", auther: "robert kiyosaki", price: "150", rating: 8 / 10 },
+        { id: 100, book_name: "atomic habits", auther: "robert kiyosaki", price: "150", rating: 8 / 10 },
+
+    ]
+    let html_data = ``;
+    books.forEach(book => {
+        html_data += `
+        <tr>
+            <td>${book.id}</td>
+            <td>${book.book_name}</td>
+            <td>${book.auther}</td>
+            <td>${book.price}</td>
+            <td>${book.rating}</td>
+        </tr>`
+        document.querySelector("#result").innerHTML = html_data;
+    })
+
+    function fetchBook()
+    {
+        let u_book=b_name.value
+       book=books.find(book=>book.book_name==u_book)
+       displayBook(book)
+    }
+
+    function displayBook(book){
+        html_data= `
+        <tr>
+            <td>${book.id}</td>
+            <td>${book.book_name}</td>
+            <td>${book.auther}</td>
+            <td>${book.price}</td>
+            <td>${book.rating}</td>
+        </tr>`
+
+        document.querySelector("#result").innerHTML=html_data;
+           
+    }
+
+
+</script>
+
+</html>
